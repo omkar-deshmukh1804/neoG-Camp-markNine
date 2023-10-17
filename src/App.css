@@ -1,0 +1,126 @@
+body{
+  background-color: #040D12;
+}
+
+.main--container  {
+  /*Theimageused*/background-image: url('/public/hero.png');
+  /*Fullheight*/height: 80vh;
+  /*Centerandscaletheimagenicely*/background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgba(0, 0, 0, 0);
+  /*Fallbackcolor*/
+  background-color: rgba(0, 0, 0, 0);
+  /*Blackw/opacity/see-through*/
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  font-family: 'Lobster', sans-serif;
+}
+
+.header--container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+  font-family: 'Caveat', cursive;
+  margin-top: .5em;
+  font-size: 1.5em;
+  text-align: center;
+
+}
+
+select{
+  margin: 1em;
+  background: rgba(128, 128, 128, 0.432);
+  color: whitesmoke;
+}
+
+.card--container{
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  justify-items: center;
+}
+
+.card{
+  background: #F1F0E8 !important;
+  height: 300px;
+  width: 300px;
+  border: 2px solid white;
+  box-sizing: border-box;
+  margin: 1.5em;
+  color: black;
+  border: none;
+  box-shadow: .25em .25em .5em rgba(255, 255, 255, 0.5);
+
+
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  border-color: rgb(255, 255, 255);
+  padding: 1rem;
+}
+
+.card--title{
+  font-family: 'Caveat', cursive;
+  margin-top: .5em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.card--image > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: none;
+  opacity: 1;
+  will-change: transform, opacity;
+  border-radius: inherit;
+  filter: unset;
+  transition: opacity 0.25s ease 0s, transform 0.25s ease 0s;
+}
+
+@media only screen and (max-width: 600px) {
+  .bg-text {
+    top: 20%;
+    left: 30%;
+    width: 60%;
+  }
+  .card--container{
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .card{
+    height: 200px;
+    width: 150px;
+    font-size: .7em;
+  }
+}
